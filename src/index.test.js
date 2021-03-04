@@ -4,6 +4,8 @@ import { JSDOM } from 'jsdom'
 import fs from 'fs'
 import path from 'path'
 
+//Only have to use this fs Node module if the Script file is embedded in the HTML instead of separate
+//if theres a sep js file, import the methods you are testing from the source file!!!
 const html = fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8');
 
 let dom
